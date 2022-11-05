@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCare - Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "topHalf">
+        <nav>
+            <h2 class = "logo">We<span>Care</span></h2>
+            <ul>
+                <li><a href= "MainPage.html" onmouseover="btnHover()">Home</a></li>
+                <li class = "active"><a href = "Services.html" onmouseover="btnHover()">Services</a></li>
+                <li><a href = "AboutUs.html" onmouseover="btnHover()">About Us</a></li>
+            </ul>
+        </nav>
+        <img id = "ambDriver" width="600px" height="500px" style="margin-left: 4%;" src = "INT 219 CA2 IMGS/ambulance_driver_2/ambulancePng.png">
+        <p style="font-family: 'Cormorant',serif; margin-left: 65%;font-size: 40px;margin-top: -27%;" >Search for <span style="color: #fa982f ;">Doctors</span>, <br>make an <span style="color: #fa982f;">Appointment</span>.</p>
+        <p style="font-family: 'Cormorant',serif; margin-left: 65%;font-size: 20px;margin-top: -20px;" >Discover the best doctors, hospitals and clinics <br>in Jalandhar.</p>
+        <button id = "btnGetStarted" type="button" style="text-decoration:none; color:black">GET STARTED</button>
+    </div>
+    <div class = "mainTreatments">
+        <p style="font-family:'Cormorant',serif; margin-left: 43%;font-size: 40px;margin-top: 70px;">Why choose us?</p>
+        <p style="font-family:'Cormorant',serif; margin-left: 37%;font-size: 20px;margin-top: -20px;">WeCare provides high quality healthcare services, including <br><span style="margin-left: 30px ;">Online Consultations</span>  with independent prescribes.</p>
+        <div class = "treatIcons">
+            <div class = "freeShippingDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px;">
+                <img id = "freeShippingImg"src="INT 219 CA2 IMGS/FreeShipping.png" width="49px" height="32px" style="margin-top: 18px; margin-left: 70px;" >
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Get the prescribed medications at your door steps. Free delivery in Jalandhar on orders above Rs.299</p>
+            </div>
+
+            <div class = "bestDoctorsDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px; margin-left: 120px;">
+                <img id = "bestDoctorImg" src="INT 219 CA2 IMGS/bestDoctors.png" width="60px" height="60px" style="margin-left: 70px; ">
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Easily book an appointment from the best doctors available in Jalandhar. </p>
+
+            </div>
+
+            <div class = "doctorConsultDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px; margin-left: 120px;">
+                <img id = "doctorConsultImg" src="INT 219 CA2 IMGS/DoctorConsultation.png" width="30px" height="45px" style="margin-left: 86px;margin-top: 10px;">
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Busy Schedule? WeCare provides the option for online appointment with selected doctors.</p>
+
+            </div>
+            
+        </div>
+        <div style="height: 200px;">
+
+        </div>
+
+    </div>
+
+    <style>
+        .treatIcons
+        {
+            display: flex;
+            align-items: center;
+            margin-top: 4%;
+            margin-left: 24%;
+        }
+        #btnGetStarted
+        {
+            width: 200px;
+            height: 50px;
+            font-family: 'Cormorant', serif;
+            border-radius: 20px;
+            font-size: 15px;
+            overflow: hidden;
+            background-color: #f8c894;
+            margin-left: 70%;
+            transition: .5s;
+            cursor: pointer;
+            margin-top: 60px;
+        }
+        #btnGetStarted:hover{
+            background-color: #ffb05b;
+            transition: .4s;
+            font-size: 19px ;
+            width: 240px;
+            height: 60px;
+            border-radius: 24px;
+            margin-left: 69%;
+            cursor: pointer;
+
+        }
+        
+        body{
+            background-color: white;
+        }
+        .logo{
+            color: #fa982f;
+        }
+        .topHalf{
+            height: 80vh;
+            width: 100%;
+            background-color: #ece9df;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            padding-left: 3%;
+            padding-right: 10%;
+            font-size: large;
+        }
+        
+        ul{
+            padding-left: 34%;
+        }
+        nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .4s;
+            font-family: 'Cormorant', serif;
+            font-size: 22px;
+        }
+        nav ul li a:hover{
+            background-color: #f8c894;
+            transition: .4s;
+            border-radius: 20px;
+            font-size: 26px;
+        }
+        .active{
+            background-color: #f8c894;
+            border-radius: 10px;
+            border-color: #fa982f;
+        }
+    </style>
+
+    
+    
+</body>
+</html>

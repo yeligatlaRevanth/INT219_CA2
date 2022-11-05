@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "topHalf">
+        <nav>
+            <h2 class = "logo">We<span>Care</span></h2>
+            <ul>
+                <li class = "active"><a href= "MainPage.html">Home</a></li>
+                <li><a href = "Services.html">Services</a></li>
+                <li><a href = "AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+        <img id = "docnpat" width="600vh" height="370vh" src = "INT 219 CA2 IMGS/Doctor_And_Patient/Doctor And Patient (i).svg">
+        <p id = "intro">Get the best possible Doctors <br> available in Jalandhar.</p>
+        <button id = "btnGetTreat" type="button"><a href = Services.html style="text-decoration:none; color:black">GET TREATMENT</a></button>
+    </div>
+
+    <div class = "icons">
+        <div id = "apt">
+            <img id = "imgApt" src= "INT 219 CA2 IMGS/Appointment.png">
+            <p>WeCare makes it effortless <br>to book an appointment with <br>your favorite doctor.</p>
+        </div>
+        <div id = "online">
+            <img id = "imgOnl" src= "INT 219 CA2 IMGS/Online.png" >
+            <p>Busy Schedule? WeCare also <br>provides the option for <br>online appointment.</p>
+        </div>
+        <div id = "free">
+            <img id = "imgFree" src = "INT 219 CA2 IMGS/Free.png" >
+            <p>We know the importance of <br>health and so all of our <br>services are completely free.</p>
+        </div>
+        
+        
+        
+    </div>
+    
+
+    <style>
+        #apt, #online, #free{
+            font-family: 'Cormorant', serif;
+            font-size: 18px;
+        }
+
+        .active{
+            background-color: #f8c894;
+            border-radius: 10px;
+            border-color: #fa982f;
+        }
+        
+        .logo{
+            color: #fa982f;
+        }
+        body{
+            background-color: #f6f6f6;
+        }
+        .topHalf{
+            height: 63vh;
+            width: 100%;
+            background-color: #ece9df;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            padding-left: 3%;
+            padding-right: 10%;
+            font-size: large;
+        }
+        
+        ul{
+            padding-left: 34%;
+        }
+        nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .4s;
+            font-family: 'Cormorant', serif;
+            font-size: 22px;
+        }
+        nav ul li a:hover{
+            background-color: #f8c894;
+            transition: .4s;
+            border-radius: 20px;
+            font-size: 26px;
+        }
+        #docnpat{
+            float: right;
+            margin-right: 10px;
+        }
+        #intro{
+            color: black;
+            font-family: 'Cormorant', serif;
+            font-size: xx-large;
+            margin-left: 20%;
+            margin-top: 8%;
+        }
+        #btnGetTreat{
+            width: 200px;
+            height: 50px;
+            font-family: 'Cormorant', serif;
+            border-radius: 20px;
+            font-size: 15px;
+            overflow: hidden;
+            background-color: #f8c894;
+            margin-left: 22%;
+            transition: .5s;
+        }
+        #btnGetTreat:hover{
+            background-color: #ffb05b;
+            transition: .4s;
+            font-size: 19px ;
+            width: 240px;
+            height: 60px;
+            border-radius: 24px;
+            margin-left: 21%;
+
+        }
+
+       
+        
+        
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 700px;
+            margin-left: 29%;
+            margin-top: 4%;
+        }
+        #imgApt, #imgOnl, #imgFree{
+            margin-left: 70px;
+            width: 5vh;
+            height: 5vh;
+            transition: .5s;
+        }
+        #imgApt:hover, #imgOnl:hover, #imgFree:hover{
+            margin-left: 65px;
+            width: 7vh;
+            height: 7vh;
+            transition: .5s;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCare - AboutUs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "topHalf">
+        <nav>
+            <h2 class = "logo">We<span>Care</span></h2>
+            <ul>
+                <li><a href= "MainPage.html">Home</a></li>
+                <li><a href = "Services.html">Services</a></li>
+                <li  class = "active"><a href = "AboutUs.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <style>
+        .logo{
+            color: #fa982f;
+        }
+        body{
+            background-color: #f6f6f6;
+        }
+        .topHalf{
+            height: 63vh;
+            width: 100%;
+            background-color: #ece9df;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding-top: 1px;
+            padding-left: 3%;
+            padding-right: 10%;
+            font-size: large;
+        }
+        
+        ul{
+            padding-left: 34%;
+        }
+        nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+            
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .4s;
+            font-family: 'Cormorant', serif;
+            font-size: 22px;
+        }
+        nav ul li a:hover{
+            background-color: #f8c894;
+            transition: .4s;
+            border-radius: 20px;
+            font-size: 26px;
+        }
+        .active{
+            background-color: #f8c894;
+            border-radius: 10px;
+            border-color: #fa982f;
+        }
+    </style>
+</body>
+</html>
