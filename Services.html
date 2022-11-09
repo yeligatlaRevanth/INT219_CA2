@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class = "topHalf">
@@ -20,39 +22,361 @@
             </ul>
         </nav>
         <img id = "ambDriver" width="600px" height="500px" style="margin-left: 4%;" src = "INT 219 CA2 IMGS/ambulance_driver_2/ambulancePng.png">
-        <p style="font-family: 'Cormorant',serif; margin-left: 65%;font-size: 40px;margin-top: -27%;" >Search for <span style="color: #fa982f ;">Doctors</span>, <br>make an <span style="color: #fa982f;">Appointment</span>.</p>
-        <p style="font-family: 'Cormorant',serif; margin-left: 65%;font-size: 20px;margin-top: -20px;" >Discover the best doctors, hospitals and clinics <br>in Jalandhar.</p>
-        <button id = "btnGetStarted" type="button" style="text-decoration:none; color:black">GET STARTED</button>
+        <div>
+            <div class="hide1">
+            
+                <p style="font-family: 'Cormorant',serif; margin-left: 62%;font-size: 40px;margin-top: -27%;" >Search for <span style="color: #fa982f ;">Doctors</span>, <br>make an <span style="color: #fa982f;">Appointment</span>.</p>
+                <p style="font-family: 'Cormorant',serif; margin-left: 62%;font-size: 20px;margin-top: -20px;" >Discover the best doctors, hospitals and clinics <br>in Jalandhar.</p>
+                <button id = "btnGetStarted" type="button" style="text-decoration:none; color:black;">GET STARTED</button>
+            </div>
+            <div class = "form1">
+                <p id = "p1">Tell us about <span style="color:black ;">yourself!</span></p>
+                <span style="font-family:'Cormorant'; font-size: 24px; margin-left: 60px; color:black;">Name: </span><input type="text" class="f1Input" id = "uName"placeholder="John Doe"><br>
+                <span style="font-family:'Cormorant'; font-size: 24px; margin-left: 60px; color:black;">Email: </span><input type="text" class="f1Input" id = "uEmail" placeholder="johndoe@gmail.com "><br>
+                <span style="font-family:'Cormorant'; font-size: 24px; margin-left: 24px; color:black;">Phone No.: </span><input type="text" class="f1Input" id = "uNum" placeholder="1234567890" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ; font-size: 14px;"><br>
+
+
+                <button id = "f1Btn" value="Submit">Submit</button>
+            </div>
+            <div class="form2">
+                <p id = "f2Intro">Where am I?</p>
+                <div class = "imgs">
+                    <div>
+                        <img src="INT 219 CA2 IMGS/skinCare.jpg" id = "skinCare" style = "width:100px; height:100px;margin-left: 40px;margin-top: 10px;">
+                        <p class="types" style="margin-left:40px ;">Skin Care</p>
+                    </div>
+                    <div>
+                        <img src="INT 219 CA2 IMGS/hairCare.jpg" id = "hairCare" style = "width:130px; height:130px;margin-left: 20px;margin-top: 0px;">
+                        <p class="types" style="margin-top: 4px; margin-left: 40px;">Hair Care</p>
+                    </div>
+                    <div>
+                        <img src="INT 219 CA2 IMGS/coughCare.png" id = "coughCare" style = "width:100px; height:100px;margin-left: 20px;margin-top: 0px;">
+                        <p class="types" style="margin-top: 32px; margin-left: 20px;">Cough & Fever</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form3">
+                <p id = "f3Intro">Best hospitals for SkinCare in Jalandhar</p>
+                <div id = "a1">
+                    <div>
+                        <img src = "Hospitals/doctor.png" width="100px" height="100px">
+                        <p class = "drText">Dr. Neha Sodhi</p>
+                        <p class = "vMore" id = "nsVD">View Details</p>
+                    </div>
+                    <div style="margin-left: 40px;">
+                        <img src = "Hospitals/mDoctor.png" width="100px" height="100px">
+                        <p class = "drText" style="margin-left:20px;">Dr. Patel</p>
+                        <p class = "vMore" id = "dpVD">View Details</p>
+                    </div>
+                    <div style="margin-left: 45px;">
+                        <img src = "Hospitals/doctor.png" width="100px" height="100px">
+                        <p class = "drText">Dr. Supriya Chopra</p>
+                        <p class = "vMore" id ="scVD">View Details</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "form4">
+                <p id="f4Intro">Coming Soon</p>
+            </div>
+        </div>
+        
     </div>
     <div class = "mainTreatments">
-        <p style="font-family:'Cormorant',serif; margin-left: 43%;font-size: 40px;margin-top: 70px;">Why choose us?</p>
+        <p style="font-family:'Cormorant',serif; margin-left: 43%;font-size: 40px;margin-top: 70px;">Why choose <span style="color: #fa982f ;"> us? </span></p>
         <p style="font-family:'Cormorant',serif; margin-left: 37%;font-size: 20px;margin-top: -20px;">WeCare provides high quality healthcare services, including <br><span style="margin-left: 30px ;">Online Consultations</span>  with independent prescribes.</p>
         <div class = "treatIcons">
             <div class = "freeShippingDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px;">
-                <img id = "freeShippingImg"src="INT 219 CA2 IMGS/FreeShipping.png" width="49px" height="32px" style="margin-top: 18px; margin-left: 70px;" >
-                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Get the prescribed medications at your door steps. Free delivery in Jalandhar on orders above Rs.299</p>
+                <img id = "freeShippingImg"src="INT 219 CA2 IMGS/FreeShipping.png" width="49px" height="32px" style="margin-top: 20px; margin-left: 70px;" >
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 12px; color: rgb(255, 246, 228);">Get the prescribed medications at your door steps. Free delivery in Jalandhar on orders above Rs.299</p>
             </div>
 
             <div class = "bestDoctorsDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px; margin-left: 120px;">
-                <img id = "bestDoctorImg" src="INT 219 CA2 IMGS/bestDoctors.png" width="60px" height="60px" style="margin-left: 70px; ">
-                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Easily book an appointment from the best doctors available in Jalandhar. </p>
+                <img id = "bestDoctorImg" src="INT 219 CA2 IMGS/bestDoctors.png" width="60px" height="60px" style="margin-left: 70px; margin-top: 13px; ">
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 12px; color: rgb(255, 246, 228); margin-top: 8px;">Easily book an appointment from the best doctors available in Jalandhar. </p>
 
             </div>
 
             <div class = "doctorConsultDiv" style="width: 200px; height: 240px; background-color: #ffb05b ; border-radius: 20px; margin-left: 120px;">
-                <img id = "doctorConsultImg" src="INT 219 CA2 IMGS/DoctorConsultation.png" width="30px" height="45px" style="margin-left: 86px;margin-top: 10px;">
-                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 8px; color: rgb(255, 246, 228);">Busy Schedule? WeCare provides the option for online appointment with selected doctors.</p>
+                <img id = "doctorConsultImg" src="INT 219 CA2 IMGS/DoctorConsultation.png" width="30px" height="45px" style="margin-left: 86px;margin-top: 22px;">
+                <p style="font-family:'Cormorant'; font-size: 20px; margin-left: 12px; color: rgb(255, 246, 228);">Busy Schedule? WeCare provides the option for online appointment with selected doctors.</p>
 
             </div>
-            
         </div>
-        <div style="height: 200px;">
+    </div>
+    
 
-        </div>
+    <div class = "filler1">
+        <img id = "f1Img" src = "INT 219 CA2 IMGS/ambulance2/ambulance2.png">
+        <p style="font-family: 'Cormorant',serif; margin-left: 10%;font-size: 38px;margin-top: -21%;" >Unable to reach the hospital by yourself?<br><span style="color: #fa982f ;"> WeCare </span> provides transportation facilities <br>throughout Jalandhar.</p>
 
     </div>
+    <div class = "footer">
+        <p style="font-family:'Cormorant'; font-size: 30px; margin-left: 35%;padding-top: 40px; color: black;"><span style="margin-left: 17%;">Have some doubts?</span> <br>Feel free to <span style="color: #fa982f;font-size: 25px;">CALL</span>  or <span style="color: #fa982f;font-size: 25px;">WHATSAPP</span>  us at : <span style="font-family:'Times New Roman', Times, serif ; font-size: 25px; color: #fa982f; ">+91 1234567890</span></p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var uName = "";
+            var uEmail = "";
+            var uNum = "";
+            $(".form1").hide();
+            $(".form2").hide();
+            $(".form3").hide();
+            $(".form4").hide();
+            
+            $("#btnGetStarted").click(function()
+            {
+                $(".hide1").fadeOut(2000);
+                $(".form1").fadeIn(800);
+                $(".hide1").replaceWith($(".form1"));
+            })
+            $("#f1Btn").mouseleave(function(){
+                $("#f1Btn").css({"width":100,"height":40});
+            })
+            $("#f1Btn").mouseover(function(){
+                $("#f1Btn").css({"width":130,"height":45});
+            })
+            $("#f1Btn").click(function(){
+                if($("#uName").val() == "" || $("#uEmail").val()== "" || $("#uNum").val() == "")
+                {
+                    alert("Fields cannot be empty");
+                }
+                else
+                {
+                    uName = $("#uName").val();
+                    uEmail = $("#uEmail").val();
+                    uNum = $("#uNum").val();
+
+                    var cBox = confirm("Name: " + uName + "\nEmail: " + uEmail+ "\nMobile No.: " + uNum + "\nDo you wish to continue?")
+                    if(cBox == true)
+                    {
+                        $(".form1").fadeOut(300,function(){
+                            $(this).hide();
+                            $(".form2").fadeIn(300);
+                            $(".form1").replaceWith($(".form2"));
+                            $("#f2Intro").html("Hello " + uName + "! Please select your concerns.");
+                            $(".types").click(function(){
+                                $(".form2").fadeOut(300);
+                                var dType = $(this).text();
+                                if(dType == "Skin Care")
+                                {
+                                    $("#f3Intro").html("The best doctors for " + dType + " in Jalandhar");
+                                    $(".form3").fadeIn(300);
+                                    $(".vMore").click(function()
+                                    {
+                                        var drID = $(this).attr('id');
+                                        var drName = "";
+                                        console.log(drID);
+                                        if(drID == "nsVD")
+                                        {
+                                            drName = "Neha Sodhi Jalandhar Dermatologist";
+                                        }
+                                        else if(drID == "dpVD")
+                                        {
+                                            drName = "Doctor Patel Jalandhar Dermatologist";
+                                        }
+                                        else if(drID == "scVD")
+                                        {
+                                            drName = "Supriya Chopra Jalandhar Dermatologist";
+                                        }
+                                        var url = "https://www.google.com/search?q="+ drName;
+                                        window.open(url, '_blank');
+                                        
+                                    })
+                                }
+                                else
+                                {
+                                    $(".form4").fadeIn(500);
+                                }
+                                
+                                console.log(dType);
+                            })
+                        });
+
+                    }
+                    
+                }
+                
+            })
+        })
+        
+
+    </script>
 
     <style>
+        #f4Intro
+        {
+            font-family: 'Cormorant',serif;
+            font-size: 32px;
+            color: #fa982f;
+            margin-left: 30%;
+            margin-top: 30%;
+        }
+        .form4
+        {
+            width: 32%;
+            height: 320px;
+            background-color: white;
+            border-width: 1px;
+            border-style:solid;
+            border-color: black;
+            margin-left: 60%;
+            margin-top: -30%;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+        .vMore
+        {
+            font-family: 'Cormorant',serif;
+            font-size: 17px;
+            padding-left: 20px;
+            color: #3c0043;
+            text-decoration-line: underline;
+            cursor: pointer;
+        }
+        #a1
+        {
+            display: flex;
+            margin-left: 20px;
+        }
+        .drText
+        {
+            font-family: 'Cormorant',serif;
+            font-size: 20px;
+        }
+        .form3
+        {
+            width: 32%;
+            height: 320px;
+            background-color: white;
+            border-width: 1px;
+            border-style:solid;
+            border-color: black;
+            margin-left: 60%;
+            margin-top: -30%;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+        .imgs
+        {
+            display: flex;
+            cursor: pointer;
+        }
+        .types
+        {
+            font-family: 'Cormorant',serif;
+            font-size: 24px;
+            transition: 0.5s;
+            cursor: pointer;
+            
+        }
+        .types:hover
+        {
+            font-size: 30px;
+            color: #fa982f;
+            transition: 0.5s;
+
+        }
+        .form2
+        {
+            width: 32%;
+            height: 320px;
+            background-color: white;
+            border-width: 1px;
+            border-style:solid;
+            border-color: black;
+            margin-left: 60%;
+            margin-top: -30%;
+            border-radius: 20px;
+        }
+        #f3Intro
+        {
+            font-family: 'Cormorant', serif;
+            color: #fa982f;
+            font-size: 24px;
+            margin-left: 8%;
+        }
+        #f2Intro
+        {
+            font-family: 'Cormorant', serif;
+            color: #fa982f;
+            font-size: 24px;
+            margin-left: 8%;
+        }
+        .footer
+        {
+            width: 100%;
+            height: 20vh;
+            background-color: white;
+            margin-top: 1%;
+        }
+        #f1Img
+        {
+            margin-left: 56%;
+            margin-top: 2%;
+            width: 80vh;
+            height: 70vh;
+        }
+        .filler1
+        {
+            height: 80vh;
+            width: 100%;
+            margin-top: 9%;
+            background-color: #ece9df;
+        }
+        input[type = "text"]
+        {
+            font-family: 'Cormorant', serif;
+            font-size: 20px;
+            padding-left: 10px;
+        }
+        .f1Input
+        {
+            border-radius: 10px;
+            border-color: wheat;
+            height: 30px;
+            width: 250px;
+            margin-left: 30px;
+            margin-top: 8px;
+            overflow: hidden;
+        }
+        #f1Btn{
+            width: 100px;
+            height: 40px;
+            font-family: 'Cormorant', serif;
+            color: #fa982f;
+            border-radius: 15px;
+            font-size: 20px;
+            background-color: white;
+            border-width: 2px;
+            border-style: dashed;
+
+            border-color: #4c4742;
+            margin-left: 40%;
+            transition: .5s;
+            cursor: pointer;
+            margin-top: 6%;
+
+        }
+        #p1
+        {
+            font-family: 'Cormorant', serif;
+            color: white;
+            font-size: 30px;
+            margin-left: 27%;
+        }
+        .form1
+        {
+            width: 500px;
+            height: 320px;
+            background-color: #ffb05b;
+            border-width: 2px;
+            border-style:solid;
+            border-color: black;
+            margin-top: -30%;
+            margin-left: 58%;
+            border-radius: 20px;
+        }
         .treatIcons
         {
             display: flex;
@@ -69,10 +393,10 @@
             font-size: 15px;
             overflow: hidden;
             background-color: #f8c894;
-            margin-left: 70%;
+            margin-left: 65%;
             transition: .5s;
             cursor: pointer;
-            margin-top: 60px;
+            margin-top: 50px;
         }
         #btnGetStarted:hover{
             background-color: #ffb05b;
@@ -81,7 +405,7 @@
             width: 240px;
             height: 60px;
             border-radius: 24px;
-            margin-left: 69%;
+            margin-left: 64%;
             cursor: pointer;
 
         }
