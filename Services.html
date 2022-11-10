@@ -59,17 +59,17 @@
                 <p id = "f3Intro">Best hospitals for SkinCare in Jalandhar</p>
                 <div id = "a1">
                     <div>
-                        <img src = "Hospitals/doctor.png" width="100px" height="100px">
+                        <img  class = "btnClick" id= "hoverImg3"src = "Hospitals/doctor.png" width="100px" height="100px" style="transition: 0.4s;">
                         <p class = "drText">Dr. Neha Sodhi</p>
                         <p class = "vMore" id = "nsVD">View Details</p>
                     </div>
-                    <div style="margin-left: 40px;">
-                        <img src = "Hospitals/mDoctor.png" width="100px" height="100px">
+                    <div  style="margin-left: 40px;">
+                        <img class = "btnClick" id= "hoverImg2" src = "Hospitals/mDoctor.png" width="100px" height="100px" style="transition: 0.4s;">
                         <p class = "drText" style="margin-left:20px;">Dr. Patel</p>
                         <p class = "vMore" id = "dpVD">View Details</p>
                     </div>
-                    <div style="margin-left: 45px;">
-                        <img src = "Hospitals/doctor.png" width="100px" height="100px">
+                    <div  style="margin-left: 45px;">
+                        <img class = "btnClick" id= "hoverImg1" src = "Hospitals/doctor.png" width="100px" height="100px" style="transition: 0.4s;">
                         <p class = "drText">Dr. Supriya Chopra</p>
                         <p class = "vMore" id ="scVD">View Details</p>
                     </div>
@@ -114,8 +114,19 @@
         <p style="font-family:'Cormorant'; font-size: 30px; margin-left: 35%;padding-top: 40px; color: black;"><span style="margin-left: 17%;">Have some doubts?</span> <br>Feel free to <span style="color: #fa982f;font-size: 25px;">CALL</span>  or <span style="color: #fa982f;font-size: 25px;">WHATSAPP</span>  us at : <span style="font-family:'Times New Roman', Times, serif ; font-size: 25px; color: #fa982f; ">+91 1234567890</span></p>
     </div>
 
+    <div id="myPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p style="font-family: 'Cormorant',serif; margin-left: 40%;font-size: 24px;color: #fa982f;">Congrats! Your appointment is booked.</p>
+            <p style="font-family: 'Cormorant',serif;margin-left: 40%;font-size: 18px;color: #ffb05b;">The hospital will contact you about the further steps.</p>
+        </div>
+
+    </div>
+
     <script>
+        
         $(document).ready(function(){
+            
             var uName = "";
             var uEmail = "";
             var uNum = "";
@@ -126,6 +137,8 @@
             
             $("#btnGetStarted").click(function()
             {
+                console.log(validateEmail("@"));
+                validateNum("9959553469")
                 $(".hide1").fadeOut(2000);
                 $(".form1").fadeIn(800);
                 $(".hide1").replaceWith($(".form1"));
@@ -143,67 +156,192 @@
                 }
                 else
                 {
+                    
                     uName = $("#uName").val();
                     uEmail = $("#uEmail").val();
                     uNum = $("#uNum").val();
-
-                    var cBox = confirm("Name: " + uName + "\nEmail: " + uEmail+ "\nMobile No.: " + uNum + "\nDo you wish to continue?")
-                    if(cBox == true)
+                    
+                    if(validateEmail(uEmail) == true && validateNum(uNum) == true)
                     {
-                        $(".form1").fadeOut(300,function(){
-                            $(this).hide();
-                            $(".form2").fadeIn(300);
-                            $(".form1").replaceWith($(".form2"));
-                            $("#f2Intro").html("Hello " + uName + "! Please select your concerns.");
-                            $(".types").click(function(){
-                                $(".form2").fadeOut(300);
-                                var dType = $(this).text();
-                                if(dType == "Skin Care")
-                                {
-                                    $("#f3Intro").html("The best doctors for " + dType + " in Jalandhar");
-                                    $(".form3").fadeIn(300);
-                                    $(".vMore").click(function()
+                        var cBox = confirm("Name: " + uName + "\nEmail: " + uEmail+ "\nMobile No.: " + uNum + "\nDo you wish to continue?")
+                        if(cBox == true)
+                        {
+                            $(".form1").fadeOut(300,function(){
+                                $(this).hide();
+                                $(".form2").fadeIn(300);
+                                $(".form1").replaceWith($(".form2"));
+                                $("#f2Intro").html("Hello " + uName + "! Please select your concerns.");
+                                $(".types").click(function(){
+                                    $(".form2").fadeOut(300);
+                                    var dType = $(this).text();
+                                    if(dType == "Skin Care")
                                     {
-                                        var drID = $(this).attr('id');
-                                        var drName = "";
-                                        console.log(drID);
-                                        if(drID == "nsVD")
+                                        $("#f3Intro").html("The best doctors for " + dType + " in Jalandhar");
+                                        $(".form3").fadeIn(300);
+                                        $(".vMore").click(function()
                                         {
-                                            drName = "Neha Sodhi Jalandhar Dermatologist";
-                                        }
-                                        else if(drID == "dpVD")
-                                        {
-                                            drName = "Doctor Patel Jalandhar Dermatologist";
-                                        }
-                                        else if(drID == "scVD")
-                                        {
-                                            drName = "Supriya Chopra Jalandhar Dermatologist";
-                                        }
-                                        var url = "https://www.google.com/search?q="+ drName;
-                                        window.open(url, '_blank');
-                                        
-                                    })
-                                }
-                                else
-                                {
-                                    $(".form4").fadeIn(500);
-                                }
-                                
-                                console.log(dType);
-                            })
-                        });
-
+                                            var drID = $(this).attr('id');
+                                            var drName = "";
+                                            console.log(drID);
+                                            if(drID == "nsVD")
+                                            {
+                                                drName = "Neha Sodhi Jalandhar Dermatologist";
+                                            }
+                                            else if(drID == "dpVD")
+                                            {
+                                                drName = "Doctor Patel Jalandhar Dermatologist";
+                                            }
+                                            else if(drID == "scVD")
+                                            {
+                                                drName = "Supriya Chopra Jalandhar Dermatologist";
+                                            }
+                                            var url = "https://www.google.com/search?q="+ drName;
+                                            window.open(url, '_blank');
+                                            
+                                        })
+                                    }
+                                    else
+                                    {
+                                        $(".form4").fadeIn(500);
+                                    }
+                                })
+                            });
+                        }
+                    
                     }
+                    else if(validateNum(uNum) == false)
+                    {
+                        alert("Please recheck your Number");
+                    }
+                    else if(validateEmail(uEmail) == false)
+                    {
+                        alert("Please recheck your Email");
+                    }
+                    
+
+                   
                     
                 }
                 
             })
+            $(".btnClick").click(function()
+            {
+                var popup = document.getElementById("myPopup");
+                var span = document.getElementsByClassName("close")[0];
+                popup.style.display = "block";
+                span.onclick = function() 
+                {
+                    popup.style.display = "none";
+                }
+            
+            })
         })
         
+        function validateEmail(email)
+        {
+            var atIndex = email.indexOf("@");
+            console.log(atIndex);
+            var dot = email.lastIndexOf(".");
+            if(atIndex < 1)
+            {
+                return false;
+                
+            }
+            
+            else if(dot <= atIndex + 2)
+            {
+                return false;
+            }
+            else if(dot === email.length - 1)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        function validateNum(num)
+        {
+            var isAlph = false;
+            if(num.length == 10)
+            {
+                for(let i = 0; i <= 9; i++)
+                {
+                    if(num.charAt(i).toLowerCase() != num.charAt(i).toUpperCase())
+                    {
+                        isAlph = true;
+                        break;
+                    }
+
+                }
+                if(isAlph == true)
+                {
+                    return false;
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+            
+        }
 
     </script>
 
     <style>
+        .popup
+        {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            border-radius: 20px;
+        }
+        @keyframes animatetop 
+        {
+            from {top: -50%; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        .popup-content 
+        {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            animation-name: animatetop;
+            animation-duration: 1s;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus 
+        {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #hoverImg1:hover, #hoverImg2:hover, #hoverImg3:hover
+        {
+            cursor: pointer;
+            width: 120px;
+            height: 120px;
+            transition: 0.4s;
+        }
         #f4Intro
         {
             font-family: 'Cormorant',serif;
@@ -214,7 +352,7 @@
         }
         .form4
         {
-            width: 32%;
+            width: 30%;
             height: 320px;
             background-color: white;
             border-width: 1px;
@@ -369,7 +507,7 @@
         {
             width: 500px;
             height: 320px;
-            background-color: #ffb05b;
+            background-color: #f8c894;
             border-width: 2px;
             border-style:solid;
             border-color: black;

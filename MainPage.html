@@ -37,16 +37,152 @@
             <img id = "imgFree" src = "INT 219 CA2 IMGS/Free.png" >
             <p>We know the importance of <br>health and so all of our <br>services are completely free.</p>
         </div>
+    </div>
+
+    <div class="slideshow-container">
+        <p id = "p2">What our <span style="color: #fa982f ;">Users</span> say!</p>
+        <div class="mySlides fade">
+            <div class="demo">
+                <img class = "demo2" src="INT 219 CA2 IMGS/CaringDoc/caringDoc.png" style="width:60vh;">
+                <p class = "ftrText"><br><br><br>"He was so lovely , caring , friendly and above all very professional . He made me<br> feel at ease . He explained well all the procedure , the risks and outcomes . I truly recommend him ."<br>
+            </div>
         
-        
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="demo">
+                <img class = "demo2" src="INT 219 CA2 IMGS/CaringDoc/caringDoc.png" style="width:60vh;">
+                <p class = "ftrText"><br><br><br><span style="color: #fa982f;">"He diagnosed in no time & i was able to recover quickly, not just diagnosing correctly ,he helped<br> me in changing my lifestyle habits. One of the best doctors I visited"<br></span> 
+            </div>
+
+        </div>
+    
+        <div class="mySlides fade">
+            <div class="demo">
+                <img class = "demo2" src="INT 219 CA2 IMGS/CaringDoc/caringDoc.png" style="width:60vh;">
+                <p class = "ftrText"><br><br><br>
+                    "From start to finish he had nothing but my best intentions in mind, due to my <br>age he would not jump in and operate instead exploring everything else that could be done and once nothing<br> else could be done he gave me my operation for which I'm very grateful."
+                </p>
+                    
+            </div>
+
+        </div>
+
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
         
     </div>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) 
+        {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) 
+        {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) 
+        {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+      </script>
     
 
     <style>
+        .demo
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .ftrText
+        {
+            font-family: 'Cormorant', serif;
+            font-size: 24px;
+            color: black;
+        }
+        #p2
+        {
+            font-family: 'Cormorant', serif;
+            font-size: 34px;
+            color: black;
+            margin-left: 45%;
+            padding-top: 4%;
+
+        }
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin-top: 10%;
+            background-color: #ece9df;
+            margin-bottom: 2%;
+        }
+
+        .mySlides {
+            display: none;
+            
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #fa982f;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade 
+        {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        .filler
+        {
+            width: 100%;
+            height: 60vh;
+            background-color: #ece9df;
+            margin-top: 15%;
+        }
         #apt, #online, #free{
             font-family: 'Cormorant', serif;
-            font-size: 18px;
+            font-size: 23px;
         }
 
         .active{
@@ -119,6 +255,7 @@
             background-color: #f8c894;
             margin-left: 22%;
             transition: .5s;
+            cursor: pointer;
         }
         #btnGetTreat:hover{
             background-color: #ffb05b;
@@ -138,20 +275,20 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            max-width: 700px;
-            margin-left: 29%;
-            margin-top: 4%;
+            max-width: 900px;
+            margin-left: 22%;
+            margin-top: 12%;
         }
         #imgApt, #imgOnl, #imgFree{
             margin-left: 70px;
-            width: 5vh;
-            height: 5vh;
+            width: 6vh;
+            height: 6vh;
             transition: .5s;
         }
         #imgApt:hover, #imgOnl:hover, #imgFree:hover{
             margin-left: 65px;
-            width: 7vh;
-            height: 7vh;
+            width: 10vh;
+            height: 10vh;
             transition: .5s;
         }
     </style>
